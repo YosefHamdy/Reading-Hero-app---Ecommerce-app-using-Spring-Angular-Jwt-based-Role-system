@@ -1,0 +1,87 @@
+
+<!-- PAGE CONTAINER-->
+<div class="page-container">
+    <!-- HEADER DESKTOP
+    <div class="brands ">
+      <a routerLink="/books">
+          <img src="assets/images/books/logo.png" alt="Juo's Book Store" class="img-responsive">
+      </a>
+  </div>-->
+    <header class="header-desktop">
+      
+      <div class="section-content section-content-p30">
+            
+          <div class="container-fluid">
+                
+              <div class="header-wrap">
+                  
+                  
+            <!--Search  -------------------------->	
+                    <app-search></app-search>
+                  
+                    
+                <!--
+                        <a class="nav-link active"routerLink="/admin"
+                        *ngIf="userService.roleMatch(['ROLE_ADMIN'])"
+                        >Admin Dashboard</a>
+                        <a class="nav-link active" routerLink="/user"
+                        *ngIf="userService.roleMatch(['ROLE_USER'])">User Dashboard</a>
+                      -->
+                        <app-cart-status></app-cart-status>
+                    <div class="d-flex align-items-center">
+                        <button *ngIf ="!isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>
+                        <button *ngIf ="isLoggedIn()" type="button" class="btn btn-primary" (click)="logout()">Logout</button>                 
+                        </div>
+                </div>
+                <div class="account-wrap"></div>
+            </div>
+        </div>
+    </header>
+
+    <!--
+   
+
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <div class="brands ">
+            <a>
+                <img src="assets/images/books/logo.png" alt="Juo's Book Store" class="img-responsive">
+            </a>
+        </div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"routerLink="/admin">Admin Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/user">User Dashboard</a>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="d-flex align-items-center">
+       <button *ngIf ="!isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>
+       <button *ngIf ="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+          
+        </div>
+      </div>
+  
+  </nav>
+-->

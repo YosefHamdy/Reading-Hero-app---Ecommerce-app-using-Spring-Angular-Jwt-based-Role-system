@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>Edit an existing book</h1>
+
+<form [formGroup] = "bookForm">
+    <div mat-dialog-content>
+        <mat-form-field appearance="outline">
+            <mat-label>Book title</mat-label>
+            <input formControlName="title" matInput placeholder="Placeholder">
+            <mat-icon matSuffix>book</mat-icon>
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline">
+            <mat-label>Book Subject</mat-label>
+            <mat-select formControlName="subject"  placeholder="Subject">
+                <mat-option value = "IT">IT</mat-option>
+                <mat-option value = "Programming">Programming</mat-option>
+                <mat-option value = "Network">Network</mat-option>
+                <mat-option value = "Web development">Web development</mat-option>
+                <mat-option value = "Other">Other</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Subtitle</mat-label>
+            <input formControlName="subTitle" matInput placeholder="Subtitle">
+          </mat-form-field>
+    
+          <mat-form-field appearance="outline">
+            <mat-label>price</mat-label>
+            <input formControlName="price" matInput placeholder="Price">
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <mat-label>Author</mat-label>
+            <input formControlName="author_Name" matInput placeholder="Author">
+          </mat-form-field>
+         
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea formControlName="description" type="input" matInput placeholder="Description" ></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Upload an Cover Image </mat-label>
+            <input formControlName="image_url" matInput placeholder="Book Image">
+        </mat-form-field>
+    
+    </div>
+
+</form>
+
+<div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 6px;" mat-raised-button color="primary" mat-dialog-close (click)="addBook()">{{actionBtn}}</button>
+
+</div>

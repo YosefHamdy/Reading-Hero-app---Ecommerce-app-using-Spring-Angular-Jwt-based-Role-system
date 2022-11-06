@@ -1,0 +1,14 @@
+
+<mat-toolbar style="background:rgb(240, 122, 122);">
+
+<mat-toolbar-row>
+  <span style="font-family:Fantasy;">BOOK HERO <mat-icon>book</mat-icon></span>
+  <span class="example-spacer"></span>
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+     <button *ngIf ="!isLoggedIn()" type="button" class="btn btn-success" routerLink="/login">Login</button>
+     <button *ngIf ="isLoggedIn()" type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+        
+      </div>  
+</mat-toolbar-row>
+</mat-toolbar>

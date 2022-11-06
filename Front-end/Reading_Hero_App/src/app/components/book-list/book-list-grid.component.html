@@ -1,0 +1,75 @@
+<div class="page-wrapper">
+
+    <app-sidebar></app-sidebar>
+
+
+    <div class="page-container">
+
+        <app-header></app-header>
+<div class="bg-image">
+	
+        <div class="main-content">
+                
+            <div class="section-content section-content-p30">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div *ngFor="let temp of books" class="col-md-3">
+                            <div class="product-box" >
+                                <a routerLink="/books/{{ temp.isbn }}">
+                                    <img src="{{temp.image_url}}" class="img-responsive">
+                                </a>
+                        
+                                <br>
+                                <a routerLink="/books/{{ temp.isbn }}">
+                                    <h1>{{ temp.title }}</h1>
+                                </a>
+                                <br>
+                                <div class="price">{{ temp.price | currency:'USD' }}</div>
+                                <button (click)="addToCart(temp)" class="btn btn-primary btn-sm">Add to cart</button>
+                                
+                            </div>
+
+                            <!--Displaying blank message-->
+                            <!-- ? is Safe navigation operator Guarfs against null and undefined values   -->
+                       
+                        </div>
+                        <div *ngIf="books?.length == 0" class="alert alert-warning col-md-12" role="alert">
+                            No Books Found.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+    </div>
+
+
+
+<!--<table class ="table">
+    <thead class ="table-dark">
+        <tr>
+            <th>Image</th>
+            <th>Book Isbn</th>
+            <th>Book Title</th>
+            <th>Book Subtitle</th>
+            <th>Book Subject</th>
+            <th>Book Author Name</th>
+            
+        </tr>   
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of books">
+            <td class="align-middle"> <img src="{{temp.image_url}}" height="50" /></td>
+            <td class="align-middle"> {{temp.isbn}}</td>
+            <td class="align-middle"> {{temp.title}}</td>
+            <td class="align-middle"> {{temp.subtitle}}</td>
+            <td class="align-middle"> {{temp.subject}}</td>
+            <td class="align-middle"> {{temp.Author_Name}}</td>
+        </tr>
+    </tbody>
+
+</table>
+-->

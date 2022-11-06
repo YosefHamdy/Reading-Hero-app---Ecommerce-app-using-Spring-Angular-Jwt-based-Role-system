@@ -1,0 +1,31 @@
+<app-plain-header></app-plain-header>
+<div class="bg-image-login"></div>
+	<div class="bg-text">
+<img src="assets/images/books/logo.png" style=" width: 150px;
+height: 100px;">
+        <h1 style="font-family:Fantasy ;">Only Heros Login</h1>
+<div class="container">
+    <div  style="padding: 30px;">
+        <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            
+ 
+            <mat-form-field appearance="outline" class="w-50">
+                <mat-label style="color:gold ;">Username </mat-label>
+                <input matInput placeholder="Enter Your Username" ngModel name="username"  id="username" required="Please Enter Your username">
+            
+            </mat-form-field>
+           
+            <br>
+            
+            <mat-form-field appearance="outline" class="w-50">
+                <mat-label style="color:gold ;">Password </mat-label>
+                <input type="password" matInput placeholder="Enter Your Password" ngModel name="password"  id="password" required="Please Enter Your Password">
+            </mat-form-field>
+            <br>
+            <button type="submit"  value="login" class="btn btn-outline-primary rounded-5" mat-raised-button color="primary">Login</button>
+            
+            
+        </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="page-wrapper">
+
+
+<app-sidebar></app-sidebar>
+
+<div class="page-container">
+
+<app-header></app-header>
+<div class="detail-section center">
+    <div class="container-fluid">
+     
+        <!-- "?" safe navigation-operator can solve race condition also -->
+        <img src="{{ book.image_url }}" class="detail-img ">
+        <h3>{{ book.title }}</h3>
+        <div class="price">{{ book.price | currency:'USD' }}</div>
+        <button (click)="addToCart()" class = "btn btn-primary btn-sm">Add to cart</button>
+
+        <hr>
+        <h4>Description</h4>
+        <p>{{ book.description }}</p>
+
+        <a routerLink="/books" class="mt-2"> Back to Books home  page</a>
+
+    </div>
+</div>
+</div>
+</div>
+

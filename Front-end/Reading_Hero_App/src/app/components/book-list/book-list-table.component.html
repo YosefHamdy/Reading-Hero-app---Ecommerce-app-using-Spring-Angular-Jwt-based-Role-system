@@ -1,0 +1,25 @@
+<table class ="table">
+    <thead class ="table-dark">
+        <tr>
+            <th>Image</th>
+            <th>Book Isbn</th>
+            <th>Book Title</th>
+            <th>Book Subtitle</th>
+            <th>Book Subject</th>
+            <th>Book Author Name</th>
+            
+        </tr>   
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of books">
+            <td class="align-middle"> <img src="{{temp.image_url}}" height="50" /></td>
+            <td class="align-middle"> {{temp.isbn}}</td>
+            <td class="align-middle"> {{temp.title}}</td>
+            <td class="align-middle"> {{temp.subtitle}}</td>
+            <td class="align-middle"> {{temp.subject}}</td>
+            <td class="align-middle"> {{temp.Author_Name}}</td>
+        </tr>
+    </tbody>
+
+</table>
+

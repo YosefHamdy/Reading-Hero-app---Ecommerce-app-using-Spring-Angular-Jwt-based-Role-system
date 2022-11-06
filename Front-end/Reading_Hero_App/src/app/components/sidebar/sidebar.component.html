@@ -1,0 +1,44 @@
+<aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+        <a href="home.html">
+            <img src="assets/images/books/logo.png" alt="Juo's Book Store" class="img-responsive">
+        </a>
+    </div>
+    <div class="menu-sidebar-content js-scrollbar1">
+        <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar-list">
+                <li>
+                <button type="button" routerLink="/panel" 
+                *ngIf="userService.roleMatch(['ROLE_ADMIN'])"  mat-stroked-button color="primary">Dashboard View</button>
+                </li>
+                <br>
+                <li>
+                    <a routerLink="/search/java" routerLinkActive="active-link">It Books</a>
+                </li>
+                <li>
+                    <a routerLink="/search/web" routerLinkActive="active-link">Web Dev Books</a>
+                </li>
+              <!-- <li>
+                    <a routerLink="/addNewBook"
+                    *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Add Books</a>
+                </li>
+                <li>
+                    <a routerLink="/search/web" routerLinkActive="active-link"
+                    *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Delete Books</a>
+                </li>
+                <li>
+                    <a routerLink="/search/web" routerLinkActive="active-link"
+                    *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Update Books</a>
+                </li>
+                <li>
+                    <a routerLink="/search/web" routerLinkActive="active-link"
+                    *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Register admin</a>
+                </li>
+                <li>
+                    <a routerLink="/search/web" routerLinkActive="active-link"
+                    *ngIf="userService.roleMatch(['ROLE_ADMIN'])">Ban User</a>     
+                </li>-->
+            </ul>
+        </nav>
+    </div>
+</aside>

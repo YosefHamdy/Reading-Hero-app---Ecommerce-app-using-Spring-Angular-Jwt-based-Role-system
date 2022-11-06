@@ -1,0 +1,75 @@
+<app-prehome></app-prehome>
+<div class="container mt-5">
+    <div class="card p-2">
+        <div class="row">
+            <div class="col-6">
+                <form #bookForm="ngForm" (ngSubmit)="addBook(bookForm)">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Book Title</mat-label>
+                        <input matInput placeholder="Book Title" [(ngModel)]="book.title" name="title">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Book Subtitle</mat-label>
+                        <input matInput placeholder="Subtitle" [(ngModel)]="book.subTitle" name="subTitle">
+                    </mat-form-field>
+
+
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Subject</mat-label>
+                        <input matInput placeholder="Subject" [(ngModel)]="book.subject" name="subject">
+                    </mat-form-field>
+
+
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Author Name</mat-label>
+                        <input matInput placeholder="Author Name" [(ngModel)]="book.author_Name" name="author_Name">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Price </mat-label>
+                        <input matInput placeholder="Price" [(ngModel)]="book.price" name="price">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Description</mat-label>
+                        <textarea type="input" matInput placeholder="Description" [(ngModel)]="book.description" name="description"></textarea>
+                      </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Upload an Cover Image </mat-label>
+                        <input matInput placeholder="Book Image" [(ngModel)]="book.image_url" name="image_url">
+                    </mat-form-field>
+                    <div align="end">
+                        <button mat-stroked-button color="primary" style="margin-right:3px ;">Clear</button>
+                        <button type="submit" mat-stroked-button color="primary">Add Book</button>
+                    </div>
+                </form>
+            </div>
+           <!-- <div class="col-6">
+                <div>
+                <input multiple
+                 type="file"
+                 #selectFile
+                 value="select"
+                (change)="onFileSelected($event)" >  
+                      </div>
+                    
+            <div class="mt-5">
+                <div class="row">
+                    <mat-grid-list cols="4" rowHeight="1:1">
+                        <mat-grid-tile *ngFor="let file of book.bookImages;">
+                            <div style="position: relative">
+                            <img [src]="file.url" width="100px" height="100px">
+                        </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+            </div>
+        </div>-->
+        </div>
+    </div>
+
+</div>
